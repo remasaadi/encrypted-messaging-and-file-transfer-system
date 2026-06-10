@@ -1,7 +1,7 @@
 # Encrypted Messaging and File Transfer System
 
 ## Overview
-A secure client-server messaging and file transfer system developed in C#/.NET.
+A secure client-server messaging and file transfer system developed in C++/.NET.
 
 The system allows users to communicate securely and transfer files using encryption mechanisms.
 

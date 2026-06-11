@@ -14,7 +14,7 @@ The system allows users to communicate securely and transfer files using encrypt
 - AES encryption
 
 ## Technologies Used
-- C#
+- C++
 - .NET
 - Visual Studio
 - Cryptography

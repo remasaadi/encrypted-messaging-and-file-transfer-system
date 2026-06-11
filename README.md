@@ -4,7 +4,7 @@
 
 A secure client-server messaging and file transfer system developed using **C++** and **Python**.
 
-The project enables users to exchange messages and transfer files securely through encrypted communication channels. It combines a high-performance C++ client application with a Python-based server, implementing modern cryptographic techniques to ensure confidentiality and secure data exchange.
+The project enables secure communication between users through encrypted messaging and file transfer mechanisms. It combines a high-performance C++ client application with a Python-based server, implementing modern cryptographic techniques to ensure confidentiality, integrity, and secure data exchange.
 
 ---
 
@@ -16,8 +16,9 @@ The project enables users to exchange messages and transfer files securely throu
 * User authentication
 * RSA public-key encryption
 * AES symmetric encryption
-* Key management and exchange
+* Secure key management and exchange
 * Encrypted communication channels
+* SQLite database integration
 * Modular and scalable design
 
 ---
@@ -35,6 +36,7 @@ The project enables users to exchange messages and transfer files securely throu
 
 * Python
 * Socket Programming
+* SQLite
 
 ### Security & Cryptography
 
@@ -43,70 +45,106 @@ The project enables users to exchange messages and transfer files securely throu
 * Base64 Encoding
 * Secure Key Exchange
 
+### Software Engineering Concepts
+
+* Client-Server Architecture
+* Modular Design
+* Multi-threading
+* Network Programming
+* Secure File Transfer Protocols
+
 ---
 
 ## System Architecture
 
 The system consists of two main components:
 
-### Messageu Client
+### Messageu Client (C++)
 
-A C++ desktop application responsible for:
+Responsible for:
 
 * User interaction
 * Message encryption and decryption
 * Secure file transfer
 * Communication with the server
+* Cryptographic key handling
 
-### Messageu Server
+### Messageu Server (Python)
 
-A Python server responsible for:
+Responsible for:
 
 * Managing client connections
 * Message routing
-* Authentication handling
-* Secure communication management
+* User authentication
+* Database management
+* Secure communication handling
 
 ---
 
 ## Project Structure
 
-```text
-encrypted-messaging-and-file-transfer-system
-│
-├── Messageu Client
-│   ├── Client
-│   ├── Crypto Modules
-│   ├── Communication Modules
-│   └── File Transfer Modules
-│
-├── Messageu Server
-│
-├── README.md
-└── .gitignore
-```
+### Client Modules
+
+* **Client** – client-side operations
+* **Communication** – network communication layer
+* **FileTransfer** – secure file transfer functionality
+* **Messages** – message processing and handling
+* **Requests** – request management
+* **KeysManagement** – cryptographic key management
+* **AESWrapper** – AES encryption implementation
+* **RSAWrapper** – RSA encryption implementation
+* **Base64Wrapper** – Base64 encoding utilities
+* **CryptoUtils** – cryptographic helper functions
+
+### Server Components
+
+* **Messageu Server.py** – main server implementation
+* **SQLite Database** – persistent data storage
+* **Client Connection Management**
+* **Authentication Handling**
+
+---
+
+## Database
+
+The server uses an SQLite database (`defensive.db`) to manage application data and support secure communication and user-related operations.
+
+SQLite was selected because it is lightweight, portable, and easy to integrate into client-server applications.
+
+---
+
+## Technical Challenges
+
+* Designing a secure client-server architecture
+* Implementing hybrid encryption using RSA and AES
+* Managing cryptographic keys securely
+* Implementing encrypted file transfer
+* Developing communication protocols between C++ and Python components
+* Handling multiple client connections concurrently
+* Integrating SQLite database storage
+* Building a modular cryptographic framework
 
 ---
 
 ## How to Run
+
+### Server
+
+1. Navigate to the `Messageu Server` directory.
+2. Run the server:
+
+```bash
+python "Messageu Server.py"
+```
+
+3. The server will initialize and listen for incoming client connections.
 
 ### Client
 
 1. Open `Messageu Client.sln` in Visual Studio.
 2. Build the solution.
 3. Run the client application.
-
-### Server
-
-1. Navigate to the server directory.
-2. Install required Python dependencies.
-3. Run the server:
-
-```bash
-python server.py
-```
-
-4. Connect the client to the running server.
+4. Connect to the running server.
 
 ---
 
@@ -114,12 +152,15 @@ python server.py
 
 This project provided hands-on experience with:
 
-* Client-server architecture
+* Cryptography and secure communication
+* RSA and AES encryption algorithms
+* Socket programming
 * Network programming
-* Secure communication protocols
-* Cryptographic algorithms
-* Software modularization
-* Cross-language system development (C++ and Python)
+* Client-server architecture
+* Cross-language development (C++ and Python)
+* Database integration using SQLite
+* Modular software design
+* Secure file transfer systems
 
 ---
 
@@ -128,3 +169,7 @@ This project provided hands-on experience with:
 **Rema Saadi**
 
 Computer Science Student | Open University
+
+📧 [saadi.rema@gmail.com](mailto:saadi.rema@gmail.com)
+
+🔗 linkedin.com/in/rema-saadi
